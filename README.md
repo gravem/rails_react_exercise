@@ -24,7 +24,18 @@ Created database 'rails_react_exercise_test'
 - create `/app/javascript/routes/index.jsx` and set up React route for Home
 - set up routing using React Router. Create `/app/javascript/components/App.jsx` and set up with routes
 - Render `App.jsx` by adding it to `/app/javascript/components/index.jsx`
-- create `/app/javascript/components/index.jsx` and set it up
+- create `/app/javascript/components/index.jsx` and set it up.
+- Add some basic styling in `app/assets/stylesheets/application.bootstrap.scss`
+
+5. Create the exercise model and controller.
+
+- `$ rails generate model Exercise name:string trainings:text instruction:text image:string`
+- add database validation in `app/models/exercise.rb`
+- add validation to the migration file `db/migrate/20241001134447_create_exercises.rb`
+- create the exercises controller; `$ rails generate controller api/v1/Exercises index create show destroy --skip-template-engine --no-helper`
+- Correct the verb and change routes in `/config/routes.rb`
+- Add a way to render exercises as json in `app/controllers/api/v1/exercises_controller.rb`
+- Add logic for creating new exercises and params.
 
 Start application with bin/dev
 
